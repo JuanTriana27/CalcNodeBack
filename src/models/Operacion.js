@@ -4,16 +4,13 @@ const OperacionSchema = new mongoose.Schema({
     tipo: {
         type: String,
         required: true,
-        enum: ['suma', 'resta', 'multiplicacion', 'division']
+        enum: ['suma', 'resta', 'multiplicacion', 'division', 'expresion']
     },
-    a: {
-        type: Number,
-        required: true
+    expresion: {
+        type: String
     },
-    b: {
-        type: Number,
-        required: true
-    },
+    a: Number,
+    b: Number,
     resultado: {
         type: Number,
         required: true
