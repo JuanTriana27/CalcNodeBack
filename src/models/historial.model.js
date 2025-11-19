@@ -1,11 +1,9 @@
 import mongoose from "mongoose";
 
-const historialSchema = new mongoose.Schema({
-    operacion: { type: String, required: true },
-    a: { type: Number, required: true },
-    b: { type: Number, required: true },
-    resultado: { type: Number, required: true },
+const HistorialSchema = new mongoose.Schema({
+    operacion: String,
+    resultado: Number,
     fecha: { type: Date, default: Date.now }
-});
+}, { collection: "operacions" });
 
-export default mongoose.model("Historial", historialSchema);
+export default mongoose.model("operacions", HistorialSchema);
