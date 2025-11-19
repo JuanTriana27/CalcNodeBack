@@ -1,11 +1,11 @@
-import { sumarService } from '../services/suma.service.js';
+import { restarService } from '../services/resta.service.js';
 
 
-export const sumar = async (req, res) => {
+export const restar = async (req, res) => {
     try {
         const { a, b } = req.body;
 
-        const resultado = await sumarService(a, b);
+        const resultado = await restarService(a, b);
 
         res.json({ resultado });
     } catch (err) {
