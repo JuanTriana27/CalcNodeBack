@@ -1,9 +1,10 @@
-import { Router } from 'express';
-import calcRoutes from './calcRoutes.js';
+import { Router } from "express";
+import calcRoutes from "./calcRoutes.js";
+import historialRoutes from "./historial.routes.js";
 
 const router = Router();
 
-// Reenvía todo lo de calc.routes.js
-router.use('/', calcRoutes);
+router.use("/calc", calcRoutes);
+router.use("/historial", historialRoutes);
 
 export default router;

@@ -1,10 +1,10 @@
-import { obtenerHistorialService } from '../services/historial.service.js';
+import { obtenerHistorial } from "../services/historial.service.js";
 
-export const obtenerHistorial = async (req, res) => {
+export const getHistorial = async (req, res) => {
     try {
-        const historial = await obtenerHistorialService();
-        res.json({ historial });
-    } catch (err) {
-        res.status(500).json({ error: err.message });
+        const data = await obtenerHistorial();
+        return res.json(data);
+    } catch (error) {
+        return res.status(500).json({ error: "Error obteniendo historial" });
     }
 };
