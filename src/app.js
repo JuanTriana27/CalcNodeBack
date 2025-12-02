@@ -5,7 +5,11 @@ import routes from './routes/index.routes.js';
 const app = express();
 
 app.use(cors({
-    origin: 'http://localhost:4200', // URL de tu Angular
+    origin: [
+        'http://localhost:4200',
+        'https://calculadora-front-node.vercel.app',
+        'https://calculadora-front-node.vercel.app/'
+    ],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
